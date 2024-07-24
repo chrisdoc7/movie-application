@@ -75,7 +75,7 @@ erDiagram
         varchar lastname
         text biography
         date birthday
-        varchar gender
+        enum gender "male | female"
         int id_home_country
         int id_primary_photo
         datetime created_at
