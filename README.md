@@ -97,7 +97,7 @@ erDiagram
         varchar lastname
         varchar email
         varchar password
-        id id_avatar
+        int id_avatar
         datetime created_at
         datetime updated_at
     }
