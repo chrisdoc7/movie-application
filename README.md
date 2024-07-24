@@ -9,7 +9,7 @@ erDiagram
     MOVIE 1--0+ PERSON : "directed by"
     MOVIE 1--0+ COUNTRY : "produced in"
     MOVIE 0+--1+ MOVIE_GENRE : "belongs to"
-    MOVIE 0+--1+ MOVIE_CHARACTER : "can have"
+    MOVIE 0+--1+ MOVIE_PERSONAGE : "can have"
     MOVIE 0+--1+ MOVIE_ACTOR : "played by"
     MOVIE |o--0+ FILE : "can have"
     MOVIE {
@@ -42,15 +42,15 @@ erDiagram
         varchar name
     }
 
-    MOVIE_CHARACTER 1+--0+ CHARACTER : "can have"
-    MOVIE_CHARACTER {
+    MOVIE_PERSONAGE 1+--0+ PERSONAGE : "can have"
+    MOVIE_PERSONAGE {
         int id_movie PK
-        int id_character PK
+        int id_personage PK
     }
 
-    CHARACTER |o--0+ PERSON : "played by"
-    CHARACTER {
-        int id_character PK
+    PERSONAGE |o--0+ PERSON : "played by"
+    PERSONAGE {
+        int id_personage PK
         varchar name
         text description
         enum role "leading | supporting | background"
