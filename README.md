@@ -51,7 +51,7 @@ erDiagram
     CHARACTER |o--0+ PERSON : "played by"
     CHARACTER {
         int id_character PK
-        varchar file_name
+        varchar name
         text description
         enum role "leading | supporting | background"
         int id_person "For unknown actor = NULL"
