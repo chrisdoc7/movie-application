@@ -22,6 +22,8 @@ erDiagram
         int id_director
         int id_country
         int id_poster
+        datetime created_at
+        datetime updated_at
     }
 
     COUNTRY {
@@ -53,6 +55,8 @@ erDiagram
         text description
         enum role "leading | supporting | background"
         int id_person "For unknown actor = NULL"
+        datetime created_at
+        datetime updated_at
     }
 
     MOVIE_ACTOR 1+--0+ PERSON : "is"
@@ -74,6 +78,8 @@ erDiagram
         varchar gender
         int id_home_country
         int id_primary_photo
+        datetime created_at
+        datetime updated_at
     }
 
     PERSON_IMAGE 0+--0+ FILE : "can have"
@@ -92,6 +98,8 @@ erDiagram
         varchar email
         varchar password
         id id_avatar
+        datetime created_at
+        datetime updated_at
     }
 
     FILE {
