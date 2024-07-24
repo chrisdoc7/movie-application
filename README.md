@@ -29,23 +29,31 @@ erDiagram
     COUNTRY {
         int id_country PK
         varchar name
+        datetime created_at
+        datetime updated_at
     }
 
     MOVIE_GENRE 1+--0+ GENRE : "belongs to"
     MOVIE_GENRE {
         int id_movie PK
         int id_genre PK
+        datetime created_at
+        datetime updated_at
     }
 
     GENRE {
         int id_genre PK
         varchar name
+        datetime created_at
+        datetime updated_at
     }
 
     MOVIE_PERSONAGE 1+--0+ PERSONAGE : "can have"
     MOVIE_PERSONAGE {
         int id_movie PK
         int id_personage PK
+        datetime created_at
+        datetime updated_at
     }
 
     PERSONAGE |o--0+ PERSON : "played by"
@@ -64,6 +72,8 @@ erDiagram
         int id_movie PK
         int id_person PK
         enum role "crowd | background"
+        datetime created_at
+        datetime updated_at
     }
 
     PERSON 1--0+ COUNTRY : "born in"
@@ -86,6 +96,8 @@ erDiagram
     PERSON_IMAGE {
         int id_person PK
         int id_file PK
+        datetime created_at
+        datetime updated_at
     }
 
     USER 0+--0+ FILE : "can have"
@@ -108,11 +120,15 @@ erDiagram
         varchar mime_type
         varchar key_file
         varchar file_url
+        datetime created_at
+        datetime updated_at
     }
 
     FAVORITE_MOVIES 1+--0+ MOVIE : "likes"
     FAVORITE_MOVIES {
         int id_user PK
         int id_movie PK
+        datetime created_at
+        datetime updated_at
     }
 ```
