@@ -106,7 +106,7 @@ erDiagram
         int id_file PK
         varchar file_name
         varchar mime_type
-        varchar key
+        varchar key_file
         varchar file_url
     }
 
