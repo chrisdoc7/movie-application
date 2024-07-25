@@ -71,7 +71,6 @@ erDiagram
     MOVIE_ACTOR {
         int id_movie PK
         int id_person PK
-        enum role "crowd | background"
         datetime created_at
         datetime updated_at
     }
