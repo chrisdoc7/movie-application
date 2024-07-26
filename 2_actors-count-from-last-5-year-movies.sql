@@ -1,4 +1,4 @@
-SELECT m.id_movie, m.title, COUNT(pg.id_person) + COUNT(ma.id_person) as actors_count
+SELECT m.id_movie, m.title, COUNT(pg.id_person) + COUNT(ma.id_person) AS actors_count
 FROM movie m
 LEFT JOIN movie_personage mp ON m.id_movie = mp.id_movie
 LEFT JOIN personage pg ON mp.id_personage = pg.id_personage
